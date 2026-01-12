@@ -1,7 +1,9 @@
+import { API_BASE_URL } from "../src/constants";
+
 async function apiFetch() {
   const start = performance.now();
 
-  const response = await fetch("https://rickandmortyapi.com/api/character");
+  const response = await fetch(`${API_BASE_URL}/api/character`);
   await response.json();
 
   const end = performance.now();
