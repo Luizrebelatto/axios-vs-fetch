@@ -1,4 +1,4 @@
-import { API_BASE_URL } from "../src/constants";
+const { API_BASE_URL } = require("../src/constants");
 
 async function apiFetch() {
   const start = performance.now();
