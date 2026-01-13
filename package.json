@@ -3,8 +3,17 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "build:axios": "webpack --config webpack.axios.config.js",
+    "build:fetch": "webpack --config webpack.fetch.config.js",
+    "build": "npm run build:axios && npm run build:fetch"
+  },
   "dependencies": {
     "axios": "^1.13.2",
     "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "webpack": "^5.104.1",
+    "webpack-cli": "^6.0.1"
   }
 }
