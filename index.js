@@ -1,5 +1,6 @@
 const express = require('express');
-const { getCharactersWithAxios, getCharactersWithFetch } = require('./src/services/api');
+const { getCharactersWithAxios } = require('./src/services/axiosService/api');
+const { getCharactersWithFetch } = require('./src/services/fetchService/api');
 
 const app = express();
 const PORT = 3000;
