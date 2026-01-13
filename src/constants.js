@@ -1,1 +1,3 @@
-export const API_BASE_URL = "https://rickandmortyapi.com"
+module.exports = {
+  API_BASE_URL: "https://rickandmortyapi.com"
+};
