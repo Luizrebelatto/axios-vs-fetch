@@ -1,6 +1,7 @@
-const { getCharactersWithFetch, fetchWithInterceptor } = require('./api');
+const { getCharactersWithFetch, fetchWithInterceptor, getCharactersWithFetchError } = require('./api');
 
 module.exports = {
   getCharactersWithFetch,
-  fetchWithInterceptor
+  fetchWithInterceptor,
+  getCharactersWithFetchError
 };

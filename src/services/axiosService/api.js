@@ -40,8 +40,45 @@ async function getCharactersWithAxios() {
   }
 }
 
+async function getCharactersWithAxiosErrors() {
+  try {
+    const response = await axios.get(`${API_BASE_URL}/api/character`, {
+      headers: {
+        Authorization: 'Bearer fake-token',
+      },
+      timeout: 5000,
+    });
+
+    return response.data;
+  } catch (error) {
+    if (error.response) {
+      console.error('[Axios][Response Error]', {
+        status: error.response.status,
+        data: error.response.data,
+      });
+
+      if (error.response.status === 401) {
+        throw new Error('Unauthorized access');
+      }
+
+      if (error.response.status === 500) {
+        throw new Error('Internal server error');
+      }
+    }
+
+    if (error.request) {
+      console.error('[Axios][Network Error]', error.message);
+      throw new Error('Error connecting to the server');
+    }
+
+    console.error('[Axios][Unknown Error]', error.message);
+    throw error;
+  }
+}
+
 
 module.exports = {
   getCharactersWithAxios,
-  getCharactersWithAxiosInterceptor
+  getCharactersWithAxiosInterceptor,
+  getCharactersWithAxiosErrors
 };

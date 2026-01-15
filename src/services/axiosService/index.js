@@ -1,6 +1,7 @@
-const { getCharactersWithAxios, getCharactersWithAxiosInterceptor } = require('./api');
+const { getCharactersWithAxios, getCharactersWithAxiosInterceptor, getCharactersWithAxiosErrors } = require('./api');
 
 module.exports = {
   getCharactersWithAxios,
-  getCharactersWithAxiosInterceptor
+  getCharactersWithAxiosInterceptor,
+  getCharactersWithAxiosErrors
 };
