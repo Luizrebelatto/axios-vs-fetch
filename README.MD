@@ -1,6 +1,9 @@
-# Execution Test
+# Axios vs Fetch
 
-### Axios
+
+## Execution Test
+
+#### Axios
 | Execution | Time (ms) |
 |---------|------------|
 | 1 | 100.78 |
@@ -15,7 +18,7 @@
 | 10 | 147.81 |
 | **Average** | **112.52** |
 
-### Fetch
+#### Fetch
 | Execution | Time (ms) |
 |---------|------------|
 | 1 | 152.65 |
