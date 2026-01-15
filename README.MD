@@ -1,5 +1,8 @@
 # Axios vs Fetch
 
+## Interceptores
+- Execute logic before the request (auth, headers, logs)
+- Execute logic after response (logs, retry, refresh token, global errors)
 
 ## Execution Test
 
