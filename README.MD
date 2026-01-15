@@ -4,6 +4,18 @@
 - Execute logic before the request (auth, headers, logs)
 - Execute logic after response (logs, retry, refresh token, global errors)
 
+## bundle size
+
+### axios
+| size | Time (ms) |
+|---------|------------|
+| 36.6 KiB | 464 ms |
+
+### Fetch
+| size | Time (ms) |
+|---------|------------|
+| 1.57 KiB | 162 ms |
+
 ## Execution Test
 
 #### Axios
