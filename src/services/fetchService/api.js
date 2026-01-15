@@ -13,6 +13,30 @@ async function getCharactersWithFetch() {
   }
 }
 
+async function fetchWithInterceptor(url, options = {}) {
+  const method = options.method ? options.method.toUpperCase() : 'GET';
+
+  const headers = {
+    'Content-Type': 'application/json',
+    Authorization: 'Bearer fake-token',
+    ...options.headers,
+  };
+
+  const response = await fetch(`${API_BASE_URL}${url}`, {
+    ...options,
+    headers,
+  });
+
+  if (!response.ok) {
+    throw new Error(`HTTP error ${response.status}`);
+  }
+
+  const status = response.status;
+
+  return response.json();
+}
+
 module.exports = {
   getCharactersWithFetch,
+  fetchWithInterceptor
 };
