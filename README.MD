@@ -1,6 +1,12 @@
-# Execution Test
+# Axios vs Fetch
 
-### Axios
+## Interceptores
+- Execute logic before the request (auth, headers, logs)
+- Execute logic after response (logs, retry, refresh token, global errors)
+
+## Execution Test
+
+#### Axios
 | Execution | Time (ms) |
 |---------|------------|
 | 1 | 100.78 |
@@ -15,7 +21,7 @@
 | 10 | 147.81 |
 | **Average** | **112.52** |
 
-### Fetch
+#### Fetch
 | Execution | Time (ms) |
 |---------|------------|
 | 1 | 152.65 |
